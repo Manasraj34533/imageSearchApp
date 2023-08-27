@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    margin:30px 0;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-input{
+    width: 35%;
+    padding: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+
+#btn-search{
+    background-color: #33FFC5 ;
+    padding: 16px 30px;
+    margin:0 5px;
+    color: white;
+    border: none;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#btn-search i{
+    color: white;
+}
+
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    max-width:1200px;
+    flex-wrap: wrap;
+    margin:30px auto;
+}
+
+.search-result{
+   margin-bottom: 60px;
+   width: 30%;
+   height: 100%;
+   border-radius: 5px;
+   box-shadow: 0 0 6px rgba(0,0,0,0.2);
+   overflow: hidden;
+}
+
+.search-result img{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.search-result:hover img{
+    opacity: 0.8;
+}
+
+.search-result a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+#show-more{
+    background-color: #3385ff;
+    padding: 12px 30px;
+    margin:10px 5px;
+    border:none;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .search-results{
+        padding: 20px;
+    }
+    .search-result{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    h1{
+        font-size: 26px;
+    }
+
+    #search-input{
+        width: 55%;
+        padding: 15px;
+        font-size:12px;
+    }
+
+    #btn-search{
+        padding: 11px 17px;
+        margin:0 5px;
+    }
+
+    .search-result{
+        width: 100%;
+    }
+}
